@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In and Sign Up Form</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/e1b82214d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                      <i class="fa-solid fa-user"></i>
+                      <input type="text" placeholder="Enter your First_Name">
+                    </div>
+                    <br>
+                    <div class="input-field" id="NameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Enter your Last_Name">
+                      </div>
+                    <br>
+                    <div class="input-field">
+                      <i class="fa-solid fa-envelope"></i>
+                      <input type="email" placeholder="Enter your Email">
+                    </div>
+                    <br>
+                    <div class="input-field" id="passwordField">
+                      <i class="fa-solid fa-lock"></i>
+                      <input type="password" placeholder="Enter your Password">
+                    </div>
+                    <br>
+                    <div class="input-field" id="PasswordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Re-Enter to match Password">
+                      </div>
+                  
+                    <p style="font-size:medium; font-style: italic; text-align:center;">Lost password? <a href="#">Click Here!</a></p>
+                  
+                    <br>
+                  
+                    <div class="btn-field">
+                      <button type="button" id="signupBtn">Sign Up</button>
+                      <button type="button" id="signinBtn">Sign In</button>
+                    </div>
+                    <br>
+                    <div class="button-Field">
+                       
+                        <ul>
+                            
+                        <li><a href="index.html" target="_blank" type="button" id="submitbutton">submit</a></li>
+                        </ul>
+                           
+
+                    </div>
+                  </div>
+                  
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+let signupBtn=document.getElementById("signupBtn");
+let signinBtn=document.getElementById("signinBtn");
+let nameField=document.getElementById("nameField");
+let title=document.getElementById("title");
+
+signinBtn.onclick =function(){
+    document.getElementById("nameField").style.display="none";
+    document.getElementById("NameField").style.display="none";
+    document.getElementById("PasswordField").style.display="none";
+    title.innerHTML="Sign In" ;
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+}
+signupBtn.onclick =function(){
+    document.getElementById("nameField").style.display="flex";
+    document.getElementById("NameField").style.display="flex";
+    document.getElementById("PasswordField").style.display="flex";
+    title.innerHTML="Sign Up" ;
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+}
+
+
+
+
+</script>
+    </body>
+</html>
